@@ -124,7 +124,9 @@ class MainActivity : AppCompatActivity() {
             builder.setView(linearLayout)
 
             builder.setPositiveButton("OK") { dialog, which ->
-                login(inputEmail.text.toString(), inputPw.text.toString())
+                if(inputEmail.text.toString().isNotEmpty() && inputPw.text.toString().isNotEmpty()) {
+                    login(inputEmail.text.toString(), inputPw.text.toString())
+                }
             }.show()
         }
     }
@@ -133,7 +135,7 @@ class MainActivity : AppCompatActivity() {
     {
         super.onStart()
         currentUser = auth.currentUser
-        if (currentUser == null) loginDialog()
+        if(currentUser == null) loginDialog()
     }
 
     private fun addMessage()

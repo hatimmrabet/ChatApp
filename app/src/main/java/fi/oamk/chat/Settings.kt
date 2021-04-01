@@ -36,5 +36,6 @@ class Settings : AppCompatActivity(){
     {
         FirebaseAuth.getInstance().signOut()
         emailText.text = ""
+        onBackPressed()
     }
 }
