@@ -26,10 +26,11 @@
 
     <Button
         android:id="@+id/sign_out_btn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sign_out"
         android:layout_marginVertical="10dp"
+        android:layout_gravity="center"
+        android:text="@string/sign_out"
         android:onClick="signOut"
         />
 
